@@ -1,10 +1,17 @@
-# 31645-EntregaFinalOttonello
-Este proyecto simula la interactividad entre un usuario y una inmobiliaria online.
-Esta inmobiliaria permite ver en detalle opciones y caracteristicas de las propiedades que tiene disponibles, para finalmente realizar una reserva de la propiedad que 
-el usuario escoja.
-Esta reserva brinda los detalles del usuario y la propiedad asi como tambien un dia y horario especifico tanto para el mismo usuario, como para la inmobiliaria, asi
-el usuario puede acercarse a la inmobiliaria con detalles precisos sobre la propiedad que escogio y la inmobiliaria sabrá que dia y en que horario llegara la persona, 
-junto a que propiedad querrá ver y que precio y caracteristicas posee.
-La idea de este proyecto es disminuir las conglomeraciones en la inmobiliaria y la perdida de tiempo y dinero en mostrar muchas propiedades a un mismo cliente quien
-solo escojera una. Asi como tambien tiempo y energia al cliente, quien no tendra que recorrer propiedades para decidirse cual escojer ni tampoco perder tieempo esperando
-en la inmobiliaria su turno, si no que lo hara virtualmente y finalmente solo verá la propiedad que seleccione desde la pagina.
+## `ONLINE RENTALS`
+
+## `Descripción.`
+Este proyecto presenta la oportunidad de que el usuario interactue con una inmobiliaria online en la cual pueda realizar una reserva de la propiedad que escoja dentro de una serie de opciones las cuales podra ver en detalle
+La finalidad del proyecto es proponer un atajo al tiempo y al dinero tanto de la inmobiliaria como del usuario ya que al realizar la reserva desde la pagina se evita colicion en la inmobiliaria fisica, ver mas de una propiedad, dirijirse hacia el lugar en mas de uan ocasion, etc..
+
+## `Instalación.`
+
+Este proyecto fue creado con HTML, CSS y JavaScript con librerias unicamente dedicadas a la estilizacion y animacion del proyecto. Por eso, una vez descargado/clonado este repositorio, para su ejecución no se necesitan instalar depedenccias ya que vienen integrados los CDN de las librerias en el archivo index.html.
+
+## `Demo.`
+Si deseas visitar esta pagina puedes hacerlo mediante este enlace: [Project demo](https://ecommerce-vans-joseottonello.vercel.app/)
+
+## `Preview.`
+![](./assets/home.png)
+![](./assets/form.png)
+

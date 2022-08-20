@@ -52,7 +52,7 @@ const functionsNavbar = () => {
                 text: "To make a reservation, you must log in",
                 duration: 2000,
                 style: {
-                    background: "#357038",
+                    background: "0d6efd",
                   },
                 }).showToast();
         } else {
@@ -66,7 +66,7 @@ const functionsNavbar = () => {
                 if (!contentReserve.length) {
                     //si aun no existen reservas, se emite una alerta
                     archive.innerHTML = `
-                    <div class="alert alert-success" role="alert">
+                    <div class="alert alert-primary" role="alert">
                     <h3>¡You haven't made a reservation yet!</h3>
                     </div>`
                 } else {
@@ -221,7 +221,11 @@ const paintProperties = () => {
         //metodo de arrays map para recorrer el json
             informacion.map((el) => {
                 container.innerHTML += `
-                    <div class="card text-center" style="width: 20rem;">
+                    <div 
+                    class="card text-center" 
+                    style="width: 20rem;" 
+                    data-aos="fade-up"
+                    data-aos-duration="1500">
                         <img src=${el.img} class="card-img-bottom" alt="..." />
                         <div class="card-body">
                             <h3 class="card-title">${el.name}</h3>
@@ -231,7 +235,7 @@ const paintProperties = () => {
                             <h4>Fee: ${el.fee}</h4>
                         </div>
                         <div>
-                            <button id=${el.id} type="button" class="btn btn-outline-primary">More Info</button>
+                            <button id=${el.id} type="button" class="btn btn-primary">More Info</button>
                         </div>
                     </div>`
                 })
@@ -262,7 +266,11 @@ const propertySelect = (select) => {
     //pintamos en un archivo HTML la seleccion
     //del usuario en detalle
     property.innerHTML = `
-        <div class="card mb-3" style="max-width: 940px;">
+        <div 
+        class="card mb-3" 
+        style="max-width: 940px;"
+        data-aos="fade-up"
+        data-aos-duration="1500">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src=${select.interior2} class="img-fluid rounded-start" alt="...">
@@ -280,12 +288,12 @@ const propertySelect = (select) => {
                         <h3>Fee: ${select.fee}</h3>
                     </div>
                     <div>
-                        <button id="back" type="button" class="btn btn-outline-primary">
+                        <button id="back" type="button" class="btn btn-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
                                 <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z"/>
                             </svg>
                         </button>
-                        <button id="addReserve" type="button" class="btn btn-outline-success">
+                        <button id="addReserve" type="button" class="btn btn-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-archive-fill" viewBox="0 0 16 16">
                                 <path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z"/>
                             </svg>
@@ -336,6 +344,7 @@ const propertySelect = (select) => {
                             //si quiere registrarse, se redirecciona al formulario
                             classReplace(navbar, "navbar","navbarRemove");
                             classReplace(property, "property","propertyRemove");
+                            classReplace(archive, "archive","archiveRemove");
                             classReplace(spinner,"spinner","spinner-border");
                             setTimeout(() => {
                                 classReplace(spinner,"spinner-border","spinner");
@@ -350,7 +359,7 @@ const propertySelect = (select) => {
                     //una vez registrado, puede libremente reservar una propiedad
                     Swal.fire({
                         icon: 'success',
-                        title:'¡Success Booking',
+                        title:'¡Success Booking!',
                         text: `Thank you for your reservation! A download will be issued which will 
                         contain both your data and the property data so that you can go to one of our 
                         closest branches and carry out the operation. 
